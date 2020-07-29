@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .form-container
+    h1 Hello 
+      span#user-name #{user.username} !
+    p.info Please chose your display name and custom channel name.
+    p.info To test this app use different login with the same channel name u provide.
+    hr
+    form(action="/chat", method="GET")
+      label(for='username') Your display name:
+      input(type="text", name="username")
+      label(for='room') Chose your channel name:
+      input(type="text", name="room")
+      button.btn.btn-primary(type='submit')  JOIN
+  
+  

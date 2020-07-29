@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .form-container
+    img(src='/img/logo.png')
+    h2  Chat Rooms App  
+    form(method='POST' autocomplete='off')
+      label(for='username') Username:
+      input(type='text' name='username' required)
+      label(for='password') Password:
+      input(type='password' name='password' required)
+      button.btn.btn-primary(type='submit')  Sign In
+    p Don&apos;t have account yet ? 
+      a(href='/signup') Sign Up

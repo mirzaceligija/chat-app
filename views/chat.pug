@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  header
+    h2.room-name
+  aside
+    a(href="#")
+      img(src="./img/icons/menu2.png")
+    a(href="#")
+      img(src="./img/icons/logout.png")
+  .chat__users
+    p 
+      b Online users
+    ul.user-list
+  .chat__main
+    div#messages
+    form(id="message-form" autocomplete="off")
+      input(type="text" name="message" placeholder="Message" required)
+      button.btn Send
+      button#send-location.btn  Send Location
+  .chat__info
+      
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js')
+  script(src="/socket.io/socket.io.js")
+  script(src="/js/main.js")
